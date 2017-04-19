@@ -1,9 +1,14 @@
-# api documentation for  [thinkjs (v2.2.18)](https://github.com/thinkjs/thinkjs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-thinkjs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-thinkjs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-thinkjs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-thinkjs)
+# npmdoc-thinkjs
+
+#### api documentation for  [thinkjs (v2.2.18)](https://github.com/thinkjs/thinkjs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-thinkjs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-thinkjs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-thinkjs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-thinkjs)
+
 #### ThinkJS - Use full ES6/7 features to develop web applications, Support TypeScript
 
-[![NPM](https://nodei.co/npm/thinkjs.png?downloads=true)](https://www.npmjs.com/package/thinkjs)
+[![NPM](https://nodei.co/npm/thinkjs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/thinkjs)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-thinkjs/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-thinkjs_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-thinkjs/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-thinkjs/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-thinkjs/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-thinkjs/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-thinkjs/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-thinkjs/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "welefen",
-        "email": "welefen@gmail.com"
+        "name": "welefen"
     },
     "bin": {
         "thinkjs": "./bin/index.js"
@@ -28,24 +32,19 @@
     },
     "contributors": [
         {
-            "name": "welefen",
-            "email": "welefen@gmail.com"
+            "name": "welefen"
         },
         {
-            "name": "im-kulikov",
-            "email": "im@kulikov.im"
+            "name": "im-kulikov"
         },
         {
-            "name": "maxzhang",
-            "email": "zhangdaiping@gmail.com"
+            "name": "maxzhang"
         },
         {
-            "name": "akira-cn",
-            "email": "akira.cn@gmail.com"
+            "name": "akira-cn"
         },
         {
-            "name": "qgy18",
-            "email": "quguangyu@gmail.com"
+            "name": "qgy18"
         }
     ],
     "dependencies": {
@@ -107,13 +106,11 @@
     "main": "lib/index.js",
     "maintainers": [
         {
-            "name": "welefen",
-            "email": "welefen@gmail.com"
+            "name": "welefen"
         }
     ],
     "name": "thinkjs",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/thinkjs/thinkjs.git"
@@ -129,30 +126,6 @@
     },
     "version": "2.2.18"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module thinkjs](#apidoc.module.thinkjs)
-1.  [function <span class="apidocSignatureSpan">thinkjs.</span>load (options)](#apidoc.element.thinkjs.load)
-
-
-
-# <a name="apidoc.module.thinkjs"></a>[module thinkjs](#apidoc.module.thinkjs)
-
-#### <a name="apidoc.element.thinkjs.load"></a>[function <span class="apidocSignatureSpan">thinkjs.</span>load (options)](#apidoc.element.thinkjs.load)
-- description and source-code
-```javascript
-function load(options) {
-  var instance = new this(options);
-  instance.load();
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
