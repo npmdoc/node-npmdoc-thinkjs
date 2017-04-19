@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/thinkjs/thinkjs#readme"
-
-    >thinkjs (v2.2.18)</a>
+    <a href="https://github.com/thinkjs/thinkjs#readme">thinkjs (v2.2.18)</a>
 </h1>
 <h4>ThinkJS - Use full ES6/7 features to develop web applications, Support TypeScript</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.thinkjs">module thinkjs</a><ol>
 
@@ -945,7 +938,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function _class() {
-  var options = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
+  var options = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
   (0, _classCallCheck3.default)(this, _class);
 
   //extend options to think
@@ -961,7 +954,7 @@
   var i = 2;
   var argv = process.argv[i];
   //get app mode from argv
-  if (argv === &#x27;production&#x27; || argv === &#x27;development&#x27; || argv === &#x27;testing&#x27;) {
+  if (argv === 'production' || argv === 'development' || argv === 'testing') {
     think.env = argv;
     i++;
   }
@@ -996,7 +989,7 @@
     <li>example usage<pre class="apidocCodePre">...
   }
 
-  key += type + &#x27;_&#x27; + name;
+  key += type + '_' + name;
   var cls = think.require(key, true);
   if (cls) {
     return cls;
@@ -1007,7 +1000,7 @@
       return _cls;
     }
   }
-  throw new Error(think.locale(&#x27;ADAPTER_NOT_FOUND&#x27;, key));
+  throw new Error(think.locale('ADAPTER_NOT_FOUND', key));
 };
 ...</pre></li>
     </ul>
@@ -2114,7 +2107,7 @@ if (execFlag) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Adapter() {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -2123,30 +2116,30 @@ if (execFlag) {
       fn = args[2];
 
   var length = args.length,
-      key = &#x27;adapter_&#x27;;
+      key = 'adapter_';
   if (length === 3) {
     //register adapter
-    //think.adapter(&#x27;session&#x27;, &#x27;redis&#x27;, function(){})
+    //think.adapter('session', 'redis', function(){})
     if (think.isFunction(fn)) {
-      key += type + &#x27;_&#x27; + name;
+      key += type + '_' + name;
       thinkData.export[key] = fn;
       return;
     }
     //create adapter
-    //module.exports = think.adapter(&#x27;session&#x27;, &#x27;memory&#x27;, {})
+    //module.exports = think.adapter('session', 'memory', {})
     else if (think.isObject(fn)) {
         return think.Class(think.adapter(type, name), fn);
       }
   }
   //type has not _
-  else if (length === 2 &#x26;&#x26; think.isString(type) &#x26;&#x26; type.indexOf(&#x27;_&#x27;) === -1) {
+  else if (length === 2 &amp;&amp; think.isString(type) &amp;&amp; type.indexOf('_') === -1) {
       //create adapter
-      //module.exports = think.adapter(&#x27;session&#x27;, {})
+      //module.exports = think.adapter('session', {})
       if (think.isObject(name)) {
-        return think.Class(think.adapter(type, &#x27;base&#x27;), name);
+        return think.Class(think.adapter(type, 'base'), name);
       }
       //get adapter
-      //think.adapter(&#x27;session&#x27;, &#x27;redis&#x27;)
+      //think.adapter('session', 'redis')
       else if (think.isString(name)) {
           return Adapter.get(type, name);
         }
@@ -2209,10 +2202,10 @@ if (execFlag) {
     return _setConfig(name, value, flag, data);
   }
   //get config
-  if (name.indexOf(&#x27;.&#x27;) === -1) {
+  if (name.indexOf('.') === -1) {
     return data[name];
   }
-  name = name.split(&#x27;.&#x27;);
+  name = name.split('.');
   value = data[name[0]] || {};
   return value[name[1]];
 }</pre></li>
@@ -2252,7 +2245,7 @@ if (execFlag) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Hook() {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -2270,7 +2263,7 @@ if (execFlag) {
     return;
   }
   // set hook data
-  // think.hook(&#x27;test&#x27;, [&#x27;middleware1&#x27;, &#x27;middleware2&#x27;])
+  // think.hook('test', ['middleware1', 'middleware2'])
   if (think.isArray(http) || !think.isHttp(http)) {
     return Hook.set(name, http, data);
   }
@@ -2313,7 +2306,7 @@ if (execFlag) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Middleware() {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -2324,19 +2317,19 @@ if (execFlag) {
   var length = args.length;
 
   // register functional or class middleware
-  // think.middleware(&#x27;parsePayLoad&#x27;, function(){})
-  if (think.isString(superClass) &#x26;&#x26; think.isFunction(methods)) {
+  // think.middleware('parsePayLoad', function(){})
+  if (think.isString(superClass) &amp;&amp; think.isFunction(methods)) {
     thinkData.middleware[superClass] = methods;
     return;
   }
   // exec middleware
-  // think.middleware(&#x27;parsePayLoad&#x27;, http, data)
-  if (length &#x3e;= 2 &#x26;&#x26; think.isHttp(methods)) {
+  // think.middleware('parsePayLoad', http, data)
+  if (length &gt;= 2 &amp;&amp; think.isHttp(methods)) {
     return Middleware.exec(superClass, methods, data);
   }
   // get middleware
-  // think.middleware(&#x27;parsePayLoad&#x27;)
-  if (length === 1 &#x26;&#x26; think.isString(superClass)) {
+  // think.middleware('parsePayLoad')
+  if (length === 1 &amp;&amp; think.isString(superClass)) {
     return Middleware.get(superClass);
   }
   return Middleware.create(superClass, methods);
@@ -2431,7 +2424,7 @@ if (execFlag) {
     <li>description and source-code<pre class="apidocCodePre">function Validate(name, callback) {
   // register validate callback
   if (think.isString(name)) {
-    // think.validate(&#x27;test&#x27;, function(){})
+    // think.validate('test', function(){})
     if (think.isFunction(callback)) {
       _validator2.default[name] = callback;
       return;
@@ -2519,7 +2512,7 @@ if (execFlag) {
   (0, _classCallCheck3.default)(this, _class);
   this.compiledMtime = {};
   this.compiledErrorFiles = [];
-  this.allowFileExt = [&#x27;.js&#x27;, &#x27;.ts&#x27;];
+  this.allowFileExt = ['.js', '.ts'];
 
   this.init.apply(this, arguments);
 }</pre></li>
@@ -2551,3 +2544,4 @@ if (execFlag) {
     ]
 </div>
 </div>
+</body></html>
